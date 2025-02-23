@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+}
+
+
+.chat-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background-color: rgb(79, 79, 79);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#image-container {
+  margin-top: 20px;
+}
+
+.chat-container {
+  width: 1000px;
+  max-width: 600px;
+  background-color: #a0a0a0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
+  margin-top: 70px;
+  margin-right: 20%;
+  margin-left: 0;
+  justify-content: space-between;
+  height: 400px;
+  
+}
+
+.chat-box {
+  padding: 20px;
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-form {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+
+.input-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.input-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-form button:hover {
+  background-color: #0056b3;
+}
+
+.prompt {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px 0;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.image {
+  align-self: flex-start;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px 0;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%; /* Ensure the container takes full width */
+}
+
+.sidebar {
+  width: 290px;
+  background-color: #ffffff;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  margin: 0; /* Ensure no margin */
+}
+
+.sidebar .topBarAction {
+  margin: 15px;
+  cursor: pointer;
+}
+
+.sidebar .topBarAction i {
+  font-size: 18px;
+}
+
+.sidebar .sideNavButton {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.sidebar .chatHistory {
+  max-height: 250px;
+  overflow-y: scroll;
+}
+
+.sidebar .chatHistory::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar .chatHistory h5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  margin: 15px 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.sidebar .chatHistory li {
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+  width: 225px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar .chatHistory li:hover {
+  background: #171414;
+}
+
+.sidebar .sideNavButton button {
+  height: 40px;
+  width: 140px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  display: flex;
+  background: #dde3ea;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.sidebar .actionList {
+  position: fixed;
+  bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .actionList button {
+  margin: 1px;
+  padding: 10px;
+  text-align: left;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  width: 230px;
+  cursor: pointer;
+  background: transparent;
+  transition: 0.3s;
+  color: #000000;
+}
+
+.sidebar .actionList button .collapseText {
+  padding: 0 10px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container .icon {
+  margin-right: 15px; /* Adjust the spacing between the image and text */
+}
+
+.logo-container .icon i {
+  font-size: 36px;
+  color: black;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+}
+.dark-theme {
+  background-color: #070606;
+  color: #fff;
+}
+
+.dark-theme .chat-container {
+  background-color: #ffffff;
+}
+
+.dark-theme .sidebar {
+  background-color: #1a1919;
+
+}
+.dark-theme .logo-container .icon i {
+   color: white;  
+}
+
+.dark-theme .logo-container a{
+  color: white;
+}
+.dark-theme .toggle-theme-btn{
+  background-color: rgb(13, 89, 230);
+  color: rgb(255, 255, 255);
+}
+
+.toggle-theme-btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-right: 25px;
+}
+@keyframes popOut {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.responsive-text {
+  font-size: 2vw; /* Adjust the value as needed */
+  text-align: center;
+  padding: 10px;
+}
+
+.pop-out {
+  animation: popOut 0.5s ease-out;
+}
+.dark-theme .actionList .transperentButton .collapseText{
+  background-color: white;
+}
+.dark-theme .actionList .transperentButton .collapseText {
+  color: white; /* Change the color to white in dark theme */
+}
+.dark-theme .actionList .transperentButton i {
+  color: white; /* Change the color to white in dark theme */
+}
+.actionList i{
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+.actionList .collapseText{
+  font-size: 20px;
+  margin-left: 30px;
+  margin-bottom: 5px;
+  
+}
+.actionList{
+  display: flex;
+  margin-bottom: 0;
+}
