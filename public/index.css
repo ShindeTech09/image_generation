@@ -119,7 +119,7 @@ button {
 .container {
   display: flex;
   height: 100%;
-  width: 100%; /* Ensure the container takes full width */
+  width: 40%; /* Ensure the container takes full width */
 }
 
 .sidebar {
